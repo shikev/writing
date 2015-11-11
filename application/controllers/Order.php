@@ -174,7 +174,7 @@ class Order extends CI_Controller {
 	}
 
 	public function isValidPrice($inPrice){
-		if($inPrice == 1000 || $inPrice == 2500 || $inPrice == 3500 || $inPrice == 4500 || $inPrice == 5500 || $inPrice == 7000 ||){
+		if($inPrice == 1000 || $inPrice == 2500 || $inPrice == 3500 || $inPrice == 4500 || $inPrice == 5500 || $inPrice == 7000){
 			return true;
 		}
 		else{
