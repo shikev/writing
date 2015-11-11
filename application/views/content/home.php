@@ -115,9 +115,6 @@
                     <li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="<?php echo base_url();?>samples">Samples</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -209,10 +206,10 @@
                         <select class="form-control" name="order-price">
                           <option value="1000">0-100 Words - $10</option>
                           <option value="2500">100-250 Words - $25</option>
-                          <option value="4000">250-500 Words - $40</option>
-                          <option value="5500">500-750 Words - $55</option>
-                          <option value="7500">750-1000 Words - $75</option>
-                          <option value="8000">1000-2000 Words - $80</option>
+                          <option value="3500">250-400 Words - $35</option>
+                          <option value="4500">400-650 Words - $45</option>
+                          <option value="5500">650-1000 Words - $55</option>
+                          <option value="7000">1000-2000 Words - $70</option>
                         </select>
                     </div>
                 </div>

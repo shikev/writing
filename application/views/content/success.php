@@ -72,9 +72,6 @@
                     <li class="page-scroll">
                         <a href="<?php echo base_url();?>#about">About</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="<?php echo base_url();?>samples">Samples</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -89,7 +86,7 @@
                 <div class="col-lg-12">
                     <div class="intro-text">
                         <span class="name"><?php 
-                        if($charge_message != "Card has been declined")
+                        if($transactionSuccessful)
                         {echo "Success!";} 
                         else
                             {echo "Something went wrong!";}?></span>

@@ -31,3 +31,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+/application/config/config.php

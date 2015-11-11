@@ -107,7 +107,7 @@ class Order extends CI_Controller {
 				$mail->isHTML(true);                                 // Set email format to HTML
 
 				$mail->Subject = 'Essay Order From ' . $this->input->post('order-name');
-				$mail->Body    = 'The client\'s email is ' . $this->input->post('order-email');
+				$mail->Body    = 'The client\'s email is ' . $this->input->post('order-email') . ". The client was charged" . $price . "for this transaction";
 
 				if(!$mail->send()) {
 					$data['file_errors'] .= '\n Message could not be sent';
