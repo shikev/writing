@@ -62,7 +62,7 @@ class Order extends CI_Controller {
 			// Create the charge on Stripe's servers - this will charge the user's card
 			if($data['file_errors'] == ""){
 				try {
-					if($intPrice == 1000 || $intPrice == 2500 || $intPrice == 3500 || $intPrice == 4500 || $intPrice == 5500 || $intPrice == 7000){
+					if($intprice == 1000 || $intprice == 2500 || $intprice == 3500 || $intprice == 4500 || $intprice == 5500 || $intprice == 7000){
 						$charge = \Stripe\Charge::create(array(
 				    "amount" => $price, // amount in cents, again
 				    "currency" => "usd",
@@ -122,7 +122,6 @@ class Order extends CI_Controller {
 				$upload_folder = $_SERVER['DOCUMENT_ROOT'] . "uploads/"; // CHANGE WHEN DEPLOYING
 				$filePath = $upload_folder . $fileName;
 				$tmpPath = $_FILES["uploaded_file"]["tmp_name"];
-				var_dump($filePath);
 				 
 				if(is_uploaded_file($tmpPath))
 				{
