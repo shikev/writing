@@ -62,7 +62,7 @@ class Order extends CI_Controller {
 			// Create the charge on Stripe's servers - this will charge the user's card
 			if($data['file_errors'] == ""){
 				try {
-					$if(isValidPrice($intprice)){
+					if(isValidPrice($intprice)){
 						$charge = \Stripe\Charge::create(array(
 				    "amount" => $price, // amount in cents, again
 				    "currency" => "usd",
