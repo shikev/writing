@@ -75,7 +75,7 @@ class Order extends CI_Controller {
 				}
 
 				//copy the temp. uploaded file to uploads folder
-				$upload_folder = $_SERVER['DOCUMENT_ROOT'] . "finalwrite/uploads/"; // CHANGE WHEN DEPLOYING
+				$upload_folder = $_SERVER['DOCUMENT_ROOT'] . "uploads/"; // CHANGE WHEN DEPLOYING
 				$filePath = $upload_folder . $fileName;
 				$tmpPath = $_FILES["uploaded_file"]["tmp_name"];
 				var_dump($filePath);
