@@ -120,7 +120,7 @@
                         <h3>Feedback within 24 hours</h3>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Essays are never shared</h3>
+                        <h3>Essays are never shared or sold</h3>
                     </div>
                 </div>
                 <div class="row">Questions or Concerns? Email us at scwediting@gmail.com</div>

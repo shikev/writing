@@ -167,7 +167,7 @@
 
                 <div class="row control-group">
                     <div class="form-group col-xs-6 col-xs-offset-3 floating-label-form-group controls">
-                        <label>Your Essay</label>
+                        <label>Your Essay (please include the prompt)</label>
                         <input type="file" name="uploaded_file">
                     </div>
                 </div>
@@ -266,7 +266,7 @@
                         <h3>Feedback within 24 hours</h3>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Essays are never shared</h3>
+                        <h3>Essays are never shared or sold</h3>
                     </div>
                 </div>
                 <div class="row" style="margin-bottom:15px">Questions or Concerns? Email us at scwediting@gmail.com</div>
