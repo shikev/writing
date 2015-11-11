@@ -62,7 +62,7 @@ class Order extends CI_Controller {
 			// Create the charge on Stripe's servers - this will charge the user's card
 			if($data['file_errors'] == ""){
 				try {
-					if(isValidPrice($intprice)){
+					if($intPrice == 1000 || $intPrice == 2500 || $intPrice == 3500 || $intPrice == 4500 || $intPrice == 5500 || $intPrice == 7000){
 						$charge = \Stripe\Charge::create(array(
 				    "amount" => $price, // amount in cents, again
 				    "currency" => "usd",
@@ -173,12 +173,4 @@ class Order extends CI_Controller {
 		
 	}
 
-	public function isValidPrice($inPrice){
-		if($inPrice == 1000 || $inPrice == 2500 || $inPrice == 3500 || $inPrice == 4500 || $inPrice == 5500 || $inPrice == 7000){
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
 }
