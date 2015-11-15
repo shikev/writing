@@ -11,6 +11,8 @@
 
     <title>SCW Revision</title>
 
+    <link rel="canonical" href="https://www.scwrevision.com"/>
+
     <link rel="icon" 
       type="image/png" 
       href="<?php echo base_url();?>favicon.ico" />
