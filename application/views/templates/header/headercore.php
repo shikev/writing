@@ -6,10 +6,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="SCW Revision is an editing company that focuses on revising and editing college essays, and help students get the edge they need to get into the college of their choice.">
     <meta name="author" content="">
 
-    <title>SCW Editing</title>
+    <title>SCW Revision</title>
+
+    <link rel="icon" 
+      type="image/png" 
+      href="<?php echo base_url();?>favicon.ico" />
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" type="text/css">

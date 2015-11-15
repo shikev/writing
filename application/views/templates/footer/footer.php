@@ -1,4 +1,4 @@
-!-- About Section -->
+<!-- About Section -->
     <section class="success" id="about">
         <div class="container">
             <div class="row">
@@ -9,7 +9,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>We care about your college essays and want you to be able to put forth your best work. That's why we assign only the best editors to revise your essay.</p>
+                    <p>We care about your college essays and want you to be able to put forth your best work. That's why we assign only the best and most professional editors to revise your essay.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>We edit every college essay to your needs. You will be able to directly email the editors and ask questions or raise concerns, hassle-free.</p>
@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; SCW Editing
+                        Copyright &copy; SCW Revision
                     </div>
                 </div>
             </div>

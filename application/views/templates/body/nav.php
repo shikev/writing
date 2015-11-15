@@ -16,12 +16,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="<?php echo base_url();?>#page-top"></a>
+                        <a href="#page-top"></a>
                     </li>
-                    <li class="<?php echo base_url();?>page-scroll">
-                        <a href="#order">Revise</a>
+                    <li class="page-scroll">
+                        <a href="<?php echo base_url();?>#order">Revise</a>
                     </li>
-                    <li class="<?php echo base_url();?>page-scroll">
+                    <li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
                 </ul>
