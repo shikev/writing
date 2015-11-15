@@ -163,11 +163,26 @@ class Order extends CI_Controller {
 
 				unlink($filePath);
 			}
-			
+			$this->load->view('templates/header/headercore');
+			$this->load->view('templates/header/headerend');
+			$this->load->view('templates/body/bodystart');
+			$this->load->view('templates/body/nav');
 			$this->load->view('content/success', $data);
+			$this->load->view('templates/footer/footer');
+			$this->load->view('templates/body/bodyend');
+			$this->load->view('templates/footer/htmlend');
+			
 		}
 		else{
+			$this->load->view('templates/header/headercore');
+			$this->load->view('templates/header/headerstripe');
+			$this->load->view('templates/header/headerend');
+			$this->load->view('templates/body/bodystart');
+			$this->load->view('templates/body/nav');
 			$this->load->view('content/home');
+			$this->load->view('templates/footer/footer');
+			$this->load->view('templates/body/bodyend');
+			$this->load->view('templates/footer/htmlend');
 		}
 		
 	}
