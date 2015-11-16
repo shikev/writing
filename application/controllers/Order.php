@@ -207,6 +207,7 @@ class Order extends CI_Controller {
 			
 		}
 		else{
+			$this->load->helper('url');
 			$this->load->view('templates/header/headercore');
 			$this->load->view('templates/header/headerstripe');
 			$this->load->view('templates/header/headerend');
