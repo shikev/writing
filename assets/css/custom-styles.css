@@ -79,10 +79,15 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: url(http://i1-news.softpedia-static.com/images/news2/The-Default-Wallpapers-of-Ubuntu-13-04-4.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 header .container {
@@ -453,4 +458,27 @@ footer .footer-below {
     display:block;
     margin: auto;
     margin-top: 5px;
+}
+
+/*Example Page*/
+
+.edit{
+    color:red;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+.example-body{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.edit-body{
+    margin-top:15px;
+}
+
+
+#commentary{
+    margin-bottom: 10px;
 }

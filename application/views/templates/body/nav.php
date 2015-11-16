@@ -21,8 +21,14 @@
                     <li class="page-scroll">
                         <a href="<?php echo base_url();?>#order">Revise</a>
                     </li>
+                     <li>
+                        <a href="<?php echo base_url();?>pages/example">Examples</a>
+                    </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#howitworks">How It Works</a>
                     </li>
                 </ul>
             </div>
