@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <div class="intro-text">
                         <span class="name">SCW</span>
-                        <span class="skills">HOW IT WORKS</span>
+                        <span class="skills">AN EXAMPLE</span>
                     </div>
                 </div>
             </div>
