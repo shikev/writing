@@ -9,7 +9,6 @@
                         {echo "Success!";} 
                         else
                             {echo "Something went wrong!";}?></span>
-                        <hr class="star-light">
                         <div class="col-xs-6 col-xs-offset-3">
                             <?php echo $charge_message?>
                         </div>

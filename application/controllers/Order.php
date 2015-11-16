@@ -22,6 +22,7 @@ class Order extends CI_Controller {
 			$intprice = intval($price);
 			$data['transactionSuccessful'] = false;
 
+
 			$data['file_errors'] = "";
 				$fileName =
 				    basename($_FILES['uploaded_file']['name']);
@@ -100,7 +101,7 @@ class Order extends CI_Controller {
 
 				$mail->isHTML(true);                                 // Set email format to HTML
 
-				$mail->Subject = 'Essay Order From ' . $this->input->post('order-name');
+				$mail->Subject = 'Something went wrong! ' . $this->input->post('order-name');
 				$mail->Body    = 'The client\'s email is ' . $this->input->post('order-email') . ". The client was charged" . $price . "for this transaction";
 				$mail->Body .= "\nThe client had some file errors, so please get in contact with them.\n";
 				$mail->Body .= "ERRORS: " . $data['file_errors'];
@@ -185,7 +186,7 @@ class Order extends CI_Controller {
 				$clientmail->Body    = 'You were charged' . $price . "for this transaction.\n\nYou should be in contact with one of our editors very soon!";
 
 
-				if(!$mail->send()) {
+				if(!$clientmail->send()) {
 					$data['file_errors'] .= '\n Message could not be sent';
 				    // echo 'Message could not be sent.';
 				    // echo 'Mailer Error: ' . $mail->ErrorInfo;
