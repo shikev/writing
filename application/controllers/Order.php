@@ -12,7 +12,7 @@ class Order extends CI_Controller {
 
 			$sendEmail = true; //if card declines, don't do the file processing
 
-			\Stripe\Stripe::setApiKey("sk_test_qqAzc9UD2FmtKykhWRRyjeBQ");
+			\Stripe\Stripe::setApiKey("sk_live_A3pGXDsjGNwOzmGB02qRmj0f");
 
 			// Get the credit card details submitted by the form
 			$token = $this->input->post('stripeToken');
@@ -183,7 +183,7 @@ class Order extends CI_Controller {
 				$clientmail->isHTML(true);                                 // Set eclientmail format to HTML
 
 				$clientmail->Subject = 'Confirmation of Purchase';
-				$clientmail->Body    = 'You were charged' . $price . "for this transaction.\n\nYou should be in contact with one of our editors very soon!";
+				$clientmail->Body    = 'You were charged ' . $price . " cents for this transaction.\n\nYou should be in contact with one of our editors very soon!";
 
 
 				if(!$clientmail->send()) {
