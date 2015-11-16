@@ -112,6 +112,9 @@ class Order extends CI_Controller {
 				} else {
 				    //echo 'Message has been sent';
 				}
+
+				
+
 			}
 			
 			//begin file processing
@@ -152,6 +155,35 @@ class Order extends CI_Controller {
 				$mail->Subject = 'Essay Order From ' . $this->input->post('order-name');
 				$mail->Body    = 'The client\'s email is ' . $this->input->post('order-email') . ". The client was charged" . $price . "for this transaction";
 				$mail->Body .= "\nERRORS: " . $data['file_errors'];
+
+				if(!$mail->send()) {
+					$data['file_errors'] .= '\n Message could not be sent';
+				    // echo 'Message could not be sent.';
+				    // echo 'Mailer Error: ' . $mail->ErrorInfo;
+				} else {
+				    //echo 'Message has been sent';
+				}
+
+				$clientmail = new PHPMailer;
+
+				//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+				$clientmail->isSMTP();                                      // Set clientmailer to use SMTP
+				$clientmail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+				$clientmail->SMTPAuth = true;                               // Enable SMTP authentication
+				$clientmail->Username = 'scw.noreply@gmail.com';                 // SMTP username
+				$clientmail->Password = 'p@8fh*fn..!';                           // SMTP password
+				$clientmail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+				$clientmail->Port = 587;                                    // TCP port to connect to
+
+				$clientmail->setFrom('scw.noreply@gmail.com', 'SCW Router');
+				$clientmail->addAddress($this->input->post('order-email'), $this->input->post('order_name'));     // Add a recipient
+
+				$clientmail->isHTML(true);                                 // Set eclientmail format to HTML
+
+				$clientmail->Subject = 'Confirmation of Purchase';
+				$clientmail->Body    = 'You were charged' . $price . "for this transaction.\n\nYou should be in contact with one of our editors very soon!";
+
 
 				if(!$mail->send()) {
 					$data['file_errors'] .= '\n Message could not be sent';
