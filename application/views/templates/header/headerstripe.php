@@ -4,7 +4,7 @@
       <script type="text/javascript">
         var verified = false;
         // This identifies your website in the createToken call below
-        Stripe.setPublishableKey('pk_live_JBGIyIu0fQLYOg383UxcNK2G');
+        Stripe.setPublishableKey('pk_test_dYlpASJw85nSevfv7qu1pqHK');
         var stripeResponseHandler = function(status, response) {
           var $form = $('#payment-form');
           if (response.error) {

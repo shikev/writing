@@ -42,6 +42,14 @@
 
                 <div class="row control-group">
                     <div class="form-group col-xs-6 col-xs-offset-3 floating-label-form-group controls">
+                        <label>Referrer's Email for 10% Discount (optional)</label>
+                        <input type="text" name="order-referrer" class="form-control" placeholder="myfriend@example.com" id="referrerEmail" >
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <div class="row control-group">
+                    <div class="form-group col-xs-6 col-xs-offset-3 floating-label-form-group controls">
                         <label>Your Essay (please include the prompt)</label>
                         <input type="file" name="uploaded_file">
                     </div>
@@ -81,10 +89,10 @@
                         <select class="form-control" name="order-price">
                           <option value="1000">0-100 Words - $10</option>
                           <option value="2500">100-250 Words - $25</option>
-                          <option value="3500">250-400 Words - $35</option>
-                          <option value="4500">400-650 Words - $45</option>
-                          <option value="5500">650-1000 Words - $55</option>
-                          <option value="7000">1000-2000 Words - $70</option>
+                          <option value="4000">250-400 Words - $35</option>
+                          <option value="5000">400-650 Words - $45</option>
+                          <option value="6000">650-1000 Words - $55</option>
+                          <option value="7500">1000-2000 Words - $70</option>
                         </select>
                     </div>
                 </div>

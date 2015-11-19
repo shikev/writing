@@ -9,10 +9,11 @@ class Order extends CI_Controller {
 			require(APPPATH . 'libraries/PHPMailerAutoload.php');
 
 			$this->load->helper('url');
+			$this->load->model('rewards_model');
 
 			$sendEmail = true; //if card declines, don't do the file processing
 
-			\Stripe\Stripe::setApiKey("sk_live_A3pGXDsjGNwOzmGB02qRmj0f");
+			\Stripe\Stripe::setApiKey("sk_test_qqAzc9UD2FmtKykhWRRyjeBQ");
 
 			// Get the credit card details submitted by the form
 			$token = $this->input->post('stripeToken');
@@ -63,18 +64,24 @@ class Order extends CI_Controller {
 			// Create the charge on Stripe's servers - this will charge the user's card
 			if($data['file_errors'] == ""){
 				try {
-					if($intprice == 1000 || $intprice == 2500 || $intprice == 3500 || $intprice == 4500 || $intprice == 5500 || $intprice == 7000){
+					if($intprice == 1000 || $intprice == 2500 || $intprice == 4000 || $intprice == 5000 || $intprice == 6000 || $intprice == 7500){
+						if($this->input->post('order-referrer')){
+							$intprice = $intprice * 0.9;
+						}
 						$charge = \Stripe\Charge::create(array(
-				    "amount" => $price, // amount in cents, again
-				    "currency" => "usd",
-				    "source" => $token,
-				    "description" => "Example charge"
-				    ));
-					$data['transactionSuccessful'] = true;
-				    $data['charge_message'] = "Transaction completed successfully. Your essay will be sent to an editor and you will receive feedback within 24 hours. The editor will contact you shortly.";
+					    "amount" => $price, // amount in cents, again
+					    "currency" => "usd",
+					    "source" => $token,
+					    "description" => "Example charge"
+					    ));
+						$data['transactionSuccessful'] = true;
+					    $data['charge_message'] = "Transaction completed successfully. Your essay will be sent to an editor and you will receive feedback within 24 hours. The editor will contact you shortly.";
 					}
 					else{
 						$data['charge_message'] = "Prices have been tampered with! Your card has not been charged.";
+					}
+					if($this->input->post('order-referrer')){
+						$this->rewards_model->give_reward($this->input->post('order-referrer'), $intprice);
 					}
 				} catch(\Stripe\Error\Card $e) {
 				  // The card has been declined
@@ -183,7 +190,7 @@ class Order extends CI_Controller {
 				$clientmail->isHTML(true);                                 // Set eclientmail format to HTML
 
 				$clientmail->Subject = 'Confirmation of Purchase';
-				$clientmail->Body    = 'You were charged ' . $price . " cents for this transaction.\n\nYou should be in contact with one of our editors very soon!";
+				$clientmail->Body    = 'You were charged ' . $intprice . " cents for this transaction.\n\nYou should be in contact with one of our editors very soon!";
 
 
 				if(!$clientmail->send()) {
