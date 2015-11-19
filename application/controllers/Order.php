@@ -13,7 +13,7 @@ class Order extends CI_Controller {
 
 			$sendEmail = true; //if card declines, don't do the file processing
 
-			\Stripe\Stripe::setApiKey("sk_test_qqAzc9UD2FmtKykhWRRyjeBQ");
+			\Stripe\Stripe::setApiKey("sk_live_A3pGXDsjGNwOzmGB02qRmj0f");
 
 			// Get the credit card details submitted by the form
 			$token = $this->input->post('stripeToken');
