@@ -89,10 +89,10 @@
                         <select class="form-control" name="order-price">
                           <option value="1000">0-100 Words - $10</option>
                           <option value="2500">100-250 Words - $25</option>
-                          <option value="4000">250-400 Words - $35</option>
-                          <option value="5000">400-650 Words - $45</option>
-                          <option value="6000">650-1000 Words - $55</option>
-                          <option value="7500">1000-2000 Words - $70</option>
+                          <option value="4000">250-400 Words - $40</option>
+                          <option value="5000">400-650 Words - $50</option>
+                          <option value="6000">650-1000 Words - $60</option>
+                          <option value="7500">1000-2000 Words - $75</option>
                         </select>
                     </div>
                 </div>
