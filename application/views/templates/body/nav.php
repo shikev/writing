@@ -28,6 +28,9 @@
                         <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
+                        <a href="#rewards">Rewards</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="#howitworks">How It Works</a>
                     </li>
                 </ul>

@@ -47,9 +47,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    Have someone refer you! If someone supplies your email when they purchase our editing service, 
+                    <p>Have someone refer you! If someone supplies your email when they purchase our editing service, 
                     you will get 10% in rewards! In other words, every 500 word essay someone purchases with your email as a referral,
-                    you get $5. Spread the word!
+                    you get $5. Spread the word!</p>
                 </div>
             </div>
         </div>
