@@ -64,6 +64,7 @@ class Order extends CI_Controller {
 			// Create the charge on Stripe's servers - this will charge the user's card
 			if($data['file_errors'] == ""){
 				try {
+					$originalprice = $intprice;
 					if($intprice == 1000 || $intprice == 2500 || $intprice == 4000 || $intprice == 5000 || $intprice == 6000 || $intprice == 7500){
 						if($this->input->post('order-referrer')){
 							$intprice = $intprice * 0.9;
@@ -81,7 +82,7 @@ class Order extends CI_Controller {
 						$data['charge_message'] = "Prices have been tampered with! Your card has not been charged.";
 					}
 					if($this->input->post('order-referrer')){
-						$this->rewards_model->give_reward($this->input->post('order-referrer'), $intprice);
+						$this->rewards_model->give_reward($this->input->post('order-referrer'), $originalprice - $intprice);
 					}
 				} catch(\Stripe\Error\Card $e) {
 				  // The card has been declined
@@ -161,7 +162,7 @@ class Order extends CI_Controller {
 				$mail->isHTML(true);                                 // Set email format to HTML
 
 				$mail->Subject = 'Essay Order From ' . $this->input->post('order-name');
-				$mail->Body    = 'The client\'s email is ' . $this->input->post('order-email') . ". The client was charged" . $price . "for this transaction";
+				$mail->Body    = 'The client\'s email is ' . $this->input->post('order-email') . ". The client was charged " . $price . "for this transaction";
 				$mail->Body .= "\nERRORS: " . $data['file_errors'];
 
 				if(!$mail->send()) {
