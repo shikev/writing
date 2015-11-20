@@ -44,7 +44,7 @@
                 <div class="row control-group">
                     <div class="form-group col-xs-6 col-xs-offset-3 floating-label-form-group controls">
                         <label>Referrer's Email for 10% Discount (optional)</label>
-                        <input type="text" name="order-referrer" class="form-control" placeholder="myfriend@example.com" id="referrerEmail" >
+                        <input type="text" name="order-referrer" class="form-control" placeholder="myfriend@example.com" id="referrerEmail" <?php if(isset($referrer)) echo " value=\"" . $referrer . "\"";?> >
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
