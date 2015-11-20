@@ -6,6 +6,7 @@
                     <div class="intro-text">
                         <span class="name">SCW</span>
                         <span class="skills">College Essay Revision Service</span>
+                        <span class="skills">OVER 50% OFF UNTIL DEC. 2
                     </div>
                 </div>
             </div>
@@ -87,12 +88,12 @@
                     <div class="form-group col-xs-6 col-xs-offset-3 floating-label-form-group controls">
                     <label>Essay Prompt Word Limit
                         <select class="form-control" name="order-price">
-                          <option value="1000">0-100 Words - $10</option>
-                          <option value="2500">100-250 Words - $25</option>
-                          <option value="4000">250-400 Words - $40</option>
-                          <option value="5000">400-650 Words - $50</option>
-                          <option value="6000">650-1000 Words - $60</option>
-                          <option value="7500">1000-2000 Words - $75</option>
+                          <option value="500">0-100 Words - <span class="strike">10</span>$5</option>
+                          <option value="1000">100-250 Words - <span class="strike">25</span>$10</option>
+                          <option value="1500">250-400 Words - <span class="strike">40</span>$15</option>
+                          <option value="2000">400-650 Words - <span class="strike">50</span>$20</option>
+                          <option value="2500">650-1000 Words - <span class="strike">60</span>$25</option>
+                          <option value="3000">1000-2000 Words - <span class="strike">75</span> $30</option>
                         </select>
                     </div>
                 </div>

@@ -65,7 +65,7 @@ class Order extends CI_Controller {
 			if($data['file_errors'] == ""){
 				try {
 					$originalprice = $intprice;
-					if($intprice == 1000 || $intprice == 2500 || $intprice == 4000 || $intprice == 5000 || $intprice == 6000 || $intprice == 7500){
+					if($intprice == 500 || $intprice == 1000 || $intprice == 1500 || $intprice == 2000 || $intprice == 2500 || $intprice == 3000){
 						if($this->input->post('order-referrer')){
 							$intprice = $intprice * 0.9;
 						}
